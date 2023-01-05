@@ -57,24 +57,28 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
   // Part 6
 
-  let ul = document.getElementById('past-races');
-  let li = document.createElement('li');
-  li.appendChild(document.createTextNode('Mexico'));
-  ul.appendChild(li);
+  const li = document.createElement('li');
+  li.textContent = 'Mexico';
+  document.querySelector('#past-races').appendChild(li);
+
+  // let ul = document.getElementById('past-races');
+  // let li = document.createElement('li');
+  // // li.appendChild(document.createTextNode('Mexico'));
+  // li.textContent = 'Mexico';
+  // ul.appendChild(li);
 
   // Part 7
 
-  let div1 = document.createElement('div');
-  div1.classList.add('blog-post', 'purple');
-  let h2 = document.createElement('h2');
-  h2.textContent = 'Mexico';
-  div1.appendChild(h2);
-  let p = document.createElement('p');
-  p.textContent = 'I BURSTED ARTURO BRAGA CARTEL';
-  div1.appendChild(p);
-  let mainEl = document.querySelector('div.main');
-  mainEl.appendChild(div1);
-  h2.style.color = '#fff';
+  const blogPost = document.createElement('div');
+  blogPost.classList.add('blog-post');
+  blogPost.classList.add('purple');
+  const heading = document.createElement('h1');
+  heading.textContent = 'Mexico';
+  const pEl = document.createElement('p');
+  pEl.textContent = 'My hometown  is Mexico';
+  document.querySelector('.main').appendChild(blogPost);
+  blogPost.appendChild(heading);
+  blogPost.appendChild(pEl);
 
   //Part 8
   let quoteTitle = document.getElementById('quote-title');
